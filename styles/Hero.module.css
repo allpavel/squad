@@ -1,0 +1,46 @@
+.hero {
+    background-image: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), url("../assets//img/hero-bg.jpg");
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 4rem 1rem;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: -1px 0 2px #2f4d5a;
+    margin-top: 0;
+}
+
+.hero p {
+    margin-top: 0;
+    margin-bottom: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.hero a {
+    font-size: 2.5rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 9px 0;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    transition: all .4s linear;
+}
+
+.hero a:hover {
+    padding-top: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+}

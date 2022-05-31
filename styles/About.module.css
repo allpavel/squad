@@ -1,0 +1,81 @@
+.about {
+    background: url("../assets/img/about-bg.jpg");
+    background-size: cover;
+    padding: 4rem 1rem;
+    position: relative;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bigCell {
+    padding: 4rem 4rem 4rem 0;
+}
+
+.bigCell h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.bigCell p {
+    margin-bottom: 2rem;
+}
+
+.bigCell a {
+    background-color: #67b0d1;
+    padding: .5rem 3.5rem .5rem 2rem;
+    border-radius: 50px;
+    color: #fff;
+    transition: all .4s linear;
+    position: relative;
+}
+
+.bigCell svg {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0.4rem;
+    right: 1.9rem;
+}
+
+.bigCell a:hover {
+    background-color: #7bbad7;
+}
+
+.smallCell {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+}
+
+.smallCell div {
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.smallCell div h2 {
+    margin-top: 0;
+}
+
+.smallCell svg {
+    color: #67b0d1;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}

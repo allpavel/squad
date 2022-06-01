@@ -1,0 +1,87 @@
+.services {
+    padding: 4rem 1rem;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.title h2 {
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.title p {
+    margin: 0;
+}
+
+.title h2::after {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/img/section-title-bg.png");
+    background-repeat: no-repeat;
+    width: 7.5rem;
+    height: 4rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+
+.row article {
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+    background-color: #fff;
+    transition: all .3s linear;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.row article::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: all .3s linear;
+}
+
+.row article svg {
+    font-size: 3rem;
+    color: var(--main-color);
+    transition: all .3s linear;
+}
+
+.row article:hover,
+.row article:hover svg {
+    color: #fff;
+}
+
+.row article:hover::before {
+    top: 0;
+    background-color: var(--main-color);
+}
+
+.row p {
+    line-height: 1.75rem;
+}

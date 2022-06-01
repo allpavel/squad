@@ -1,7 +1,7 @@
 import React from "react";
 import { BiChevronsDown } from "react-icons/bi";
 import { motion } from "framer-motion";
-import styles from "../../../../styles/Hero.module.css";
+import styles from "../../styles/Hero.module.css";
 
 const Hero: React.FC = () => {
     return (

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { BiReceipt, BiCubeAlt, BiImages, BiShield, BiChevronRight } from "react-icons/bi";
 import { motion } from "framer-motion";
-import styles from "../../../../styles/About.module.css";
+import styles from "../../styles/About.module.css";
 
 const About: React.FC = () => {
     return (

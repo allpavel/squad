@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { BiChevronDown } from "react-icons/bi";
-import styles from "../../../styles/NavBar.module.css";
+import styles from "../../styles/NavBar.module.css";
 
 const NavBar: React.FC = () => {
     return (

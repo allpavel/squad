@@ -5,7 +5,7 @@ import styles from "../../styles/Hero.module.css";
 
 const Hero: React.FC = () => {
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero} id="hero">
             <motion.div
                 initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, transition: { type: "tween", duration: 1 }, opacity: 1 }}

@@ -1,0 +1,28 @@
+.counter {
+    background-color: #f4f9fc;
+}
+
+.container {
+    max-width: 1320px;
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.counterItem {
+    display: flex;
+}
+
+.counterIcon {
+    color: var(--main-color);
+    padding-top: 5px;
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+.counterText p:first-child {
+    font-size: 3rem;
+    margin: 0 0 1rem;
+}

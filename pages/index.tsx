@@ -5,6 +5,7 @@ import About from "../components/About/About";
 import Services from "../components/Services/Services";
 import Counter from "../components/Counter/Counter";
 import CallToAction from "../components/CallToAction/CallToAction";
+import Testimonials from "../components/Testimonials/Testimonials";
 
 const Home: NextPage = () => {
     return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
                 <Services />
                 <Counter />
                 <CallToAction />
+                <Testimonials />
             </main>
         </>
     );

@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "../../styles/Testimonials.module.css";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
@@ -16,15 +17,25 @@ const Testimonials: React.FC = () => {
     return (
         <section className={styles.testimonials}>
             <div className={styles.container}>
-                <div className={styles.title}>
+                <motion.div
+                    className={styles.title}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ y: 0, transition: { type: "tween", duration: 1.5 }, opacity: 1 }}
+                    viewport={{ once: true }}
+                >
                     <h2>Testimonials</h2>
                     <p>
                         Very you&apos;ll firmament years also earth fowl and brought thing moved and set and fruitful
                         fill moveth moving. You&apos;ll fly male void third two night won&apos;t gathering firmament
                         appear. Whose.
                     </p>
-                </div>
-                <div className={styles.imageSlider}>
+                </motion.div>
+                <motion.div
+                    className={styles.imageSlider}
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, transition: { type: "tween", duration: 1.5 }, opacity: 1 }}
+                    viewport={{ once: true }}
+                >
                     <Swiper
                         modules={[Autoplay]}
                         slidesPerView={3}
@@ -94,7 +105,7 @@ const Testimonials: React.FC = () => {
                             <p className={styles.job}>Designer</p>
                         </SwiperSlide>
                     </Swiper>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

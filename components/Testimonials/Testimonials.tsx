@@ -1,15 +1,16 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
 import Image from "next/image";
 import styles from "../../styles/Testimonials.module.css";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-import "swiper/css";
-import "swiper/css/autoplay";
 import testimonials1 from "../../assets/img/testimonials/testimonials-1.jpg";
 import testimonials2 from "../../assets/img/testimonials/testimonials-2.jpg";
 import testimonials3 from "../../assets/img/testimonials/testimonials-3.jpg";
 import testimonials4 from "../../assets/img/testimonials/testimonials-4.jpg";
 import testimonials5 from "../../assets/img/testimonials/testimonials-5.jpg";
+import "swiper/css";
+import "swiper/css/autoplay";
 
 const Testimonials: React.FC = () => {
     return (
@@ -24,7 +25,12 @@ const Testimonials: React.FC = () => {
                     </p>
                 </div>
                 <div className={styles.imageSlider}>
-                    <Swiper slidesPerView={3} loop={true} autoplay={{ delay: 1000, disableOnInteraction: false }}>
+                    <Swiper
+                        modules={[Autoplay]}
+                        slidesPerView={3}
+                        loop={true}
+                        autoplay={{ delay: 2000, disableOnInteraction: false }}
+                    >
                         <SwiperSlide>
                             <p className={styles.imageSliderText}>
                                 <ImQuotesLeft />

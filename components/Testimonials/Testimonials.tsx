@@ -20,7 +20,7 @@ const Testimonials: React.FC = () => {
                 <motion.div
                     className={styles.title}
                     initial={{ opacity: 0 }}
-                    whileInView={{ y: 0, transition: { type: "tween", duration: 1.5 }, opacity: 1 }}
+                    whileInView={{ transition: { type: "tween", duration: 1.5 }, opacity: 1 }}
                     viewport={{ once: true }}
                 >
                     <h2>Testimonials</h2>

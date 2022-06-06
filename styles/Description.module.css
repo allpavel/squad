@@ -1,0 +1,35 @@
+.description {
+    padding: 4rem 1rem;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.text h2 {
+    margin-top: 0;
+}
+
+.text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.text svg {
+    color: #67b0d1;
+    font-size: 1.25rem;
+    padding-right: 7px;
+    vertical-align: -.2rem;
+}
+
+.text p {
+    line-height: 1.5rem;
+}
+
+.text p:first-of-type {
+    font-style: italic;
+}

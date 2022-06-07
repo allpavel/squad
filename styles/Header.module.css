@@ -1,14 +1,28 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: fixed;
-    max-width: 1320px;
-    padding: 1.5rem 1rem;
-    margin: 0 auto;
     background-color: transparent;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     right: 0;
     left: 0;
+    padding: 1.5rem 0;
+    transition: all .5s linear;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.coloredHeader {
+    background-color: rgba(103, 176, 209, 0.9);
+}
+
+.scrolledHeader {
+    background-color: rgba(55, 142, 181, 0.9);
+    padding: 0.75rem;
 }

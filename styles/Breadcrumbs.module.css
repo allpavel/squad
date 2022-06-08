@@ -1,0 +1,50 @@
+.breadcrumbs {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    background-color: #f3f8fa;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+.links {
+    display: flex;
+    margin: 0;
+    list-style: none;
+}
+
+.links li {
+    letter-spacing: 1px;
+    padding-left: 10px;
+}
+
+.links li::before {
+    content: "/";
+    padding-right: 10px;
+}
+
+.links li:first-child {
+    padding-left: 0;
+}
+
+.links li:first-child::before {
+    content: '';
+    padding-right: 0;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--main-color);
+}

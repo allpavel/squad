@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 
     useEffect(() => {
         const changeHeaderBackgroundColor = () => {
-            if (window.scrollY >= 80) {
+            if (window.scrollY >= 120) {
                 setHeader(true);
             } else {
                 setHeader(false);

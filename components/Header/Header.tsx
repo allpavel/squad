@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { MdMenu, MdClose } from "react-icons/md";
 import NavBar from "../Navbar/Navbar";
 import Logo from "../Logo/Logo";
 import styles from "../../styles/Header.module.css";
-import { useRouter } from "next/router";
+import MobileNavbar from "../MobileNavbar/MobileNavbar";
 
 const Header: React.FC = () => {
     const [header, setHeader] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleMobileMenuClick = () => {
+        setIsOpen((prev) => !prev);
+    };
+
     const router = useRouter();
 
     useEffect(() => {
@@ -32,6 +40,8 @@ const Header: React.FC = () => {
             <div className={styles.container}>
                 <Logo />
                 <NavBar />
+                {isOpen ? <MdClose onClick={handleMobileMenuClick} /> : <MdMenu onClick={handleMobileMenuClick} />}
+                <MobileNavbar isOpen={isOpen} />
             </div>
         </header>
     );

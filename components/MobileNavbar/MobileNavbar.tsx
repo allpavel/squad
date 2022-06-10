@@ -5,13 +5,14 @@ import styles from "../../styles/MobileNavbar.module.css";
 
 interface Props {
     isOpen: boolean;
+    setIsOpen: (param: boolean) => void;
 }
 
-const MobileNavbar: React.FC<Props> = ({ isOpen }) => {
+const MobileNavbar: React.FC<Props> = ({ isOpen, setIsOpen }) => {
     const router = useRouter();
     return (
         <nav className={`${styles.mobileNavigation} ${isOpen ? styles.isOpen : styles.isClosed}`}>
-            <ul className={styles.mobileNavigationList}>
+            <ul className={styles.mobileNavigationList} onClick={(isOpen) => setIsOpen(!isOpen)}>
                 <li className={styles.navigationListItem}>
                     <Link href="/">
                         <a className={`${router.pathname === "/" ? styles.active : ""}`}>Home</a>

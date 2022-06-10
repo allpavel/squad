@@ -5,7 +5,7 @@
     top: 0;
     right: 0;
     left: 0;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     transition: all .3s linear;
 }
 
@@ -24,20 +24,22 @@
 
 .scrolledHeader {
     background-color: rgba(55, 142, 181, 0.9);
-    padding: 0.75rem;
 }
 
-.container svg {
+.menu svg {
     display: none;
 }
 
 @media screen and (max-width: 991px) {
-    .container svg{
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    color: #fff;
-    cursor: pointer;
-    z-index: 100;
+    .menu svg {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        color: #fff;
+        cursor: pointer;
+        z-index: 100;
+        position: absolute;
+        right: 20px;
+        top: 16px;
     }
 }

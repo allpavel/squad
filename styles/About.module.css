@@ -60,9 +60,9 @@
 }
 
 .smallCell {
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .smallCell div {
@@ -78,4 +78,34 @@ grid-template-rows: 1fr 1fr;
     color: var(--main-color);;
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+    .about {
+        padding: 2rem 1rem;
+    }
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .bigCell {
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .smallCell {
+        grid-template-columns: 1fr;
+    }
+
+    .smallCell h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .smallCell p {
+        margin: 0;
+    }
+
+    .smallCell svg {
+        margin: 0;
+    }
 }

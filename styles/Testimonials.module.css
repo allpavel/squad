@@ -88,3 +88,9 @@
     margin: 0;
     color: rgba(17, 15, 15, 0.596);
 }
+
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 2rem 1rem 4rem;
+    }
+}

@@ -38,7 +38,12 @@ const Testimonials: React.FC = () => {
                 >
                     <Swiper
                         modules={[Autoplay]}
-                        slidesPerView={3}
+                        slidesPerView={1}
+                        breakpoints={{
+                            740: {
+                                slidesPerView: 3,
+                            },
+                        }}
                         loop={true}
                         autoplay={{ delay: 2000, disableOnInteraction: false }}
                     >

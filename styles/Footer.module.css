@@ -7,14 +7,13 @@
 .container {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem;
     position: relative;
 }
 
 .footerRow {
     display: grid;
     grid-template-columns: 30% 20% 20% 30%;
-    gap: 1rem;
     padding: 3.75rem 0 2rem 0;
 }
 
@@ -30,6 +29,10 @@
 
 .footerContacts p:first-of-type {
     font-style: italic;
+}
+
+.footerLinks {
+    padding: 0 1rem;
 }
 
 .footerLinks h2,
@@ -76,6 +79,12 @@
     cursor: pointer;
 }
 
+.footerNewsletter {
+    padding: 0 1rem;
+    overflow: hidden;
+    
+}
+
 .footerNewsletter h2 {
     margin-top: 0;
 }
@@ -94,7 +103,7 @@
 .footerNewsletter input[type="email"] {
     font-size: 1.2rem;
     border: 0;
-    width: calc(100% - 6.875rem);
+    max-width: calc(100% - 6.875rem);
 }
 
 .footerNewsletter input[type="submit"] {
@@ -124,4 +133,40 @@
 
 .footerCopyright p:last-of-type {
     margin-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .footerRow {
+        grid-template-columns: 40% 30% 30%;
+    }    
+}
+
+@media screen and (max-width: 740px) {
+    .footerRow {
+        grid-template-columns: 50% 50%;
+    }    
+}
+
+@media screen and (max-width: 580px) {
+    .footerRow {
+        grid-template-columns: 1fr;
+    }
+
+    .footerLinks {
+        padding: 0;
+    }
+
+    .footerLinks ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footerLinks h2 {
+        margin-bottom: 1rem;
+    }
+
+    .footerNewsletter {
+        margin-top: 2rem;
+        padding: 0;
+    }
 }

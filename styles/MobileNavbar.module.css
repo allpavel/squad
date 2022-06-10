@@ -1,8 +1,4 @@
 .mobileNavigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -19,7 +15,7 @@
 .mobileNavigationList {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:flex-start;
     position: absolute;
     top: 3.5rem;
     bottom: 1rem;
@@ -40,7 +36,7 @@
     width: 100%;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #000;
     transition: all 0.5s ease;
 }

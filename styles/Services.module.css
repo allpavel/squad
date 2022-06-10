@@ -85,3 +85,20 @@
 .row p {
     line-height: 1.75rem;
 }
+
+
+@media screen and (max-width: 992px) {
+    .services {
+        padding: 2rem 1rem;
+    }
+
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+}

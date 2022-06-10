@@ -56,8 +56,11 @@
     transition: all .6s linear;
 }
 
+
 @media screen and (min-width: 992px) {
     .mobileNavigation {
         display: none;
     }    
+
+
 }

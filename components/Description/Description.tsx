@@ -9,7 +9,9 @@ const Description: React.FC = () => {
     return (
         <section className={styles.description}>
             <div className={styles.container}>
-                <Image src={ourTeam} alt="Photo of our team" width={486} height={386} />
+                <div className={styles.image}>
+                    <Image src={ourTeam} alt="Photo of our team" width="486" height="386" />
+                </div>
                 <motion.article
                     className={styles.text}
                     initial={{ opacity: 0 }}

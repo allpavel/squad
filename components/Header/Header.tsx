@@ -40,7 +40,7 @@ const Header: React.FC = () => {
             <div className={styles.container}>
                 <Logo />
                 <NavBar />
-                <MobileNavbar isOpen={isOpen} />
+                <MobileNavbar isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
             <div className={styles.menu}>
                 {isOpen ? <MdClose onClick={handleMobileMenuClick} /> : <MdMenu onClick={handleMobileMenuClick} />}

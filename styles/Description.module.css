@@ -33,3 +33,18 @@
 .text p:first-of-type {
     font-style: italic;
 }
+
+
+@media screen and (max-width: 992px) {
+    .description {
+        padding: 2rem 1rem;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .image {
+        margin: 0 auto;
+    }
+}

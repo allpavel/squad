@@ -1,0 +1,68 @@
+.contacts {
+    padding: 4rem 1rem;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: "address email call";
+    grid-gap: 1rem;
+}
+
+.info {
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    text-align: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.875rem;
+}
+
+.address {
+    grid-area: address;
+}
+
+.email {
+    grid-area: email;
+}
+
+.call {
+    grid-area: call;
+}
+
+.info svg {
+    color: var(--main-color);
+    padding: 0.5rem;
+    font-size: 3rem;
+}
+
+.icon {
+    display: inline-block;
+    border: 2px dotted #f0f7fa;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 992px) {
+    .contacts {
+        padding: 2rem 1rem;
+    }
+    
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "address address" 
+                            "email call";
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "address"
+            "email"
+            "call";
+    }
+}

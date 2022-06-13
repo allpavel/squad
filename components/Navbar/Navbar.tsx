@@ -77,8 +77,8 @@ const NavBar: React.FC = () => {
                     </ul>
                 </li>
                 <li className={styles.navigationListItem}>
-                    <Link href="/contact">
-                        <a>Contact</a>
+                    <Link href="/contacts">
+                        <a>Contacts</a>
                     </Link>
                 </li>
             </ul>

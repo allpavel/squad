@@ -24,6 +24,10 @@
     list-style: none;
 }
 
+.links ul {
+    padding-left: 0;
+}
+
 .links li {
     letter-spacing: 1px;
     padding-left: 10px;

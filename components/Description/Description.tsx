@@ -9,9 +9,14 @@ const Description: React.FC = () => {
     return (
         <section className={styles.description}>
             <div className={styles.container}>
-                <div className={styles.image}>
+                <motion.div
+                    className={styles.image}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ transition: { type: "tween", duration: 1.5 }, opacity: 1 }}
+                    viewport={{ once: true }}
+                >
                     <Image src={ourTeam} alt="Photo of our team" width="486" height="386" />
-                </div>
+                </motion.div>
                 <motion.article
                     className={styles.text}
                     initial={{ opacity: 0 }}

@@ -90,9 +90,10 @@
 .textarea textarea {
     width: 100%;
     padding: 0.625rem 1rem;
+    resize: none;
 }
 
-.name input, .subject input, .textarea textarea {
+.inputBorder {
     border: 1px solid #ced4da;
 }
 
@@ -133,6 +134,10 @@
     .mapContainer {
         grid-template-columns: 1fr;
     }
+}
+
+.error {
+    border-color: red;
 }
 
 @media screen and (max-width: 580px) {

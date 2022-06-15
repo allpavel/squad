@@ -2,8 +2,24 @@ import React from "react";
 import styles from "../../styles/ContactsAddress.module.css";
 import { BiMap, BiEnvelope, BiPhoneCall } from "react-icons/bi";
 import { motion } from "framer-motion";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+type Inputs = {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+};
 
 const ContactsAddress: React.FC = () => {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<Inputs>();
+
+    const handleFormSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
     return (
         <motion.section
             className={styles.contacts}
@@ -42,16 +58,48 @@ const ContactsAddress: React.FC = () => {
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>
-                <form className={styles.form}>
+                <form className={styles.form} onSubmit={handleSubmit(handleFormSubmit)}>
                     <div className={styles.name}>
-                        <input type="text" placeholder="Your Name" />
-                        <input type="text" placeholder="Your Email" />
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            aria-invalid={errors.name ? "true" : "false"}
+                            className={`${styles.inputBorder} ${errors.name ? styles.error : ""}`}
+                            {...register("name", { required: true })}
+                        />
+                        {errors.name && <span>This field is required</span>}
+                        <input
+                            type="text"
+                            placeholder="Your Email"
+                            aria-invalid={errors.email ? "true" : "false"}
+                            className={`${styles.inputBorder} ${errors.email ? styles.error : ""}`}
+                            {...register("email", {
+                                required: true,
+                                pattern:
+                                    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                            })}
+                        />
+                        {errors.email && <span>This field is required</span>}
                     </div>
                     <div className={styles.subject}>
-                        <input type="text" placeholder="Subject" />
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                            aria-invalid={errors.subject ? "true" : "false"}
+                            className={`${styles.inputBorder} ${errors.subject ? styles.error : ""}`}
+                            {...register("subject", { required: true })}
+                        />
+                        {errors.subject && <span>This field is required</span>}
                     </div>
                     <div className={styles.textarea}>
-                        <textarea placeholder="Message" rows={5} />
+                        <textarea
+                            placeholder="Message"
+                            rows={5}
+                            aria-invalid={errors.message ? "true" : "false"}
+                            className={`${styles.inputBorder} ${errors.message ? styles.error : ""}`}
+                            {...register("message", { required: true })}
+                        />
+                        {errors.message && <span>This field is required</span>}
                     </div>
                     <div className={styles.button}>
                         <button type="submit">Send Message</button>

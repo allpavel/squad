@@ -1,0 +1,124 @@
+
+.form {
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+}
+
+.name {
+    display: flex;
+    margin-bottom:2.5rem;
+}
+
+.name {
+    column-gap: 1rem;
+}
+
+.name div {
+    width: 100%;
+}
+
+.name input {
+    width: 100%;
+    padding: 0.625rem 1rem;
+}
+
+.name p,
+.subject p {
+    margin-top: 0.5rem;
+}
+
+.subject {
+    margin-bottom: 2.5rem;
+}
+
+.subject input {
+    width: 100%;
+    padding: 0.625rem 1rem;
+}
+
+.name div,
+.subject div,
+.textarea div {
+    position: relative;
+}
+
+.textarea {
+    margin-bottom: 2rem;
+}
+
+.textarea textarea {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    resize: none;
+}
+
+.inputBorder {
+    border: 1px solid #ced4da;
+}
+
+.name input:focus, .subject input:focus, .textarea textarea:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+.button {
+    text-align: center;
+}
+
+.button button {
+    background-color: var(--main-color);
+    padding: 0.625rem 1.5rem;
+    border: 0;
+    color: #fff;
+    transition: all 0.4s linear;
+}
+.button button:hover {
+    cursor: pointer;
+    background-color: #8ec4dd;
+}
+
+.button button[disabled], .button button:disabled {
+    background-color: red;
+}
+
+.error {
+    border-color: red;
+}
+
+.errorMessage {
+    position: absolute;
+    bottom: -100%;
+}
+
+.textarea div .errorMessage {
+    bottom: -30%
+}
+
+@media screen and (max-width: 580px) {
+    .form {
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .name {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .name input {
+        width: 100%;
+    }
+
+    .name input:first-child {
+        margin-bottom: 3rem;
+    }
+
+    .errorMessage {
+        bottom: 10%;
+    }
+
+    .subject div .errorMessage {
+        bottom: -100%;
+    }
+}

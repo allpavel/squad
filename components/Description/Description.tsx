@@ -15,7 +15,13 @@ const Description: React.FC = () => {
                     whileInView={{ transition: { type: "tween", duration: 1.5 }, opacity: 1 }}
                     viewport={{ once: true }}
                 >
-                    <Image src={ourTeam} alt="Photo of our team" width="486" height="386" />
+                    <Image
+                        src={ourTeam}
+                        alt="The group of people are working on their laptops at a big common table"
+                        width={600}
+                        height={386}
+                        priority
+                    />
                 </motion.div>
                 <motion.article
                     className={styles.text}

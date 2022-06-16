@@ -1,12 +1,11 @@
 .breadcrumbs {
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     background-color: #f3f8fa;
 }
 
 .container {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;

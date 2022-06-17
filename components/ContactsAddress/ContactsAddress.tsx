@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Form from "../Form/Form";
 
 const ContactsAddress: React.FC = () => {
-    console.count("render");
     return (
         <motion.section
             className={styles.contacts}

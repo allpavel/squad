@@ -36,7 +36,9 @@ const Breadcrumbs: React.FC<Props> = ({ path }) => {
                     </li>
                     {path.slice(0, path.length - 1).map((link, index) => (
                         <li key={index}>
-                            <Link href={`/${link.toLowerCase()}/`}>{link}</Link>
+                            <Link href={`/${link.toLowerCase()}/`}>
+                                <a>{link}</a>
+                            </Link>
                         </li>
                     ))}
                     <li>{path[path.length - 1]}</li>

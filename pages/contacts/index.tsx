@@ -1,7 +1,5 @@
-import { ReactElement } from "react";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import ContactsAddress from "../../components/ContactsAddress/ContactsAddress";
-import Layout from "../../components/Layout/Layout";
 import { useGetPath } from "../../hooks/useGetPath";
 import styles from "../../styles/Main.module.css";
 
@@ -14,7 +12,3 @@ export default function ContactsPage() {
         </main>
     );
 }
-
-ContactsPage.getLayout = function getLayout(page: ReactElement) {
-    return <Layout>{page}</Layout>;
-};

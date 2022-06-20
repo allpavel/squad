@@ -29,3 +29,135 @@
     transform: translate(-50%, -50%);
     z-index: -1;
 }
+
+.galery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cardInfo {
+    position: absolute;
+    top: 80%;
+    right: 1.25rem;
+    left: 1.25rem;
+    padding: 1rem 0;
+    background-color: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    max-height: 6rem;
+    overflow: hidden;
+    transition: all .5s linear;
+}
+
+.cardInfo h2 {
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+    position: relative;
+    padding-bottom: 0.625rem;
+}
+
+.cardInfo h2::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+
+.cardInfo p {
+    margin: 0;
+}
+
+.card:hover .cardInfo {
+    max-height: 18.75rem;
+}
+
+.socials {
+    margin-top: 1.3rem;
+}
+
+.socials svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 5px;
+    color: var(--main-color);
+    transition: all .4s linear;
+}
+
+.socials svg:hover {
+    cursor: pointer;
+    color: #52869d;
+}
+
+
+@media screen and (max-width: 992px) {
+    .teams {
+        padding: 2rem 1rem 4rem;
+    }
+    
+    .galery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cardInfo {
+        right: 2rem;
+        left: 2rem;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .cardInfo {
+        right: 2rem;
+        left: 2rem;
+        padding: .6rem;
+        max-height: 5rem;
+    }
+
+    .socials {
+        margin-top: 1rem;
+    }
+
+    .socials svg {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .card:hover .cardInfo {
+        max-height: 15rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .cardInfo {
+        top:85%;
+        right: 20%;
+        left: 20%;
+        max-height: 15rem;
+    }
+
+    .galery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cardInfo {
+        font-size: 0.75rem;
+        top:80%;
+        right: 10%;
+        left: 10%;
+    }
+
+    .galery {
+        grid-template-columns: 1fr;
+    }
+}

@@ -57,7 +57,7 @@ const PortfolioPage: React.FC<Props> = ({ teams: { data } }) => {
                 viewport={{ once: true }}
             >
                 <article className={styleClasses.title}>
-                    <h2>Our Team</h2>
+                    <h1>Our Team</h1>
                     <p>
                         Very you&apos;ll firmament years also earth fowl and brought thing moved and set and fruitful
                         fill moveth moving. You&apos;ll fly male void third two night won&apos;t gathering firmament

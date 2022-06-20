@@ -1,0 +1,33 @@
+.portfolioFilters {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background-color:#fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.filtersRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: .5rem 2rem;
+    border-radius: 30px;
+    margin-bottom: 3rem;
+}
+
+.filtersItem {
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.filtersItem:hover {
+    color: #444;
+}

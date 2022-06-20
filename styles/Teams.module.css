@@ -10,14 +10,14 @@
     padding-bottom: 2rem;
 }
 
-.title h2 {
+.title h1 {
     position: relative;
     font-size: 2rem;
     margin-bottom: 2rem;
     z-index: 2;
 }
 
-.title h2::after {
+.title h1::after {
     content: "";
     position: absolute;
     background-image: url("../assets/img/section-title-bg.png");

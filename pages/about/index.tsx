@@ -1,6 +1,4 @@
-import { ReactElement } from "react";
 import { useGetPath } from "../../hooks/useGetPath";
-import Layout from "../../components/Layout/Layout";
 import About from "../../components/About/About";
 import styles from "../../styles/Main.module.css";
 import Services from "../../components/Services/Services";
@@ -18,7 +16,3 @@ export default function AboutUs() {
         </main>
     );
 }
-
-AboutUs.getLayout = function getLayout(page: ReactElement) {
-    return <Layout>{page}</Layout>;
-};

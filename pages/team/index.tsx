@@ -12,40 +12,23 @@ type Props = {
         data: {
             id: number;
             attributes: {
-                createdAt?: string;
                 image: {
                     data: {
                         attributes: {
-                            alternativeText: string;
-                            caption: string;
-                            createdAt: string;
-                            ext: string;
-                            formats: {};
-                            hash: string;
-                            height: number;
-                            mime: string;
                             name: string;
-                            previewUrl: string;
-                            provider: string;
-                            provider_metadata: object;
-                            size: number;
-                            updatedAt: string;
                             url: string;
-                            width: number;
                         };
                     };
                 };
                 name: string;
                 position: string;
-                publishedAt: string;
-                updatedAt: string;
             };
         }[];
         meta: {};
     };
 };
 
-const PortfolioPage: React.FC<Props> = ({ teams: { data } }) => {
+const TeamPage: React.FC<Props> = ({ teams: { data } }) => {
     const path = useGetPath();
     return (
         <main className={styles.main}>
@@ -98,4 +81,4 @@ export async function getStaticProps() {
     };
 }
 
-export default PortfolioPage;
+export default TeamPage;

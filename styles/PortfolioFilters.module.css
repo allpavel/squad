@@ -11,7 +11,8 @@
 }
 
 .filtersRow {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -20,6 +21,7 @@
     padding: .5rem 2rem;
     border-radius: 30px;
     margin-bottom: 3rem;
+    margin-top: 0;
 }
 
 .filtersItem {
@@ -30,4 +32,14 @@
 
 .filtersItem:hover {
     color: #444;
+}
+
+.active {
+    color: #444;
+}
+
+@media screen and (max-width: 580px) {
+    .filtersRow {
+        grid-template-columns: 1fr 1fr;
+    }
 }

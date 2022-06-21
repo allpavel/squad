@@ -1,0 +1,79 @@
+.galery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all .4s linear;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    opacity: 0;
+    transition: all .4s linear;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.links {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    transition: all .4s linear;
+}
+
+.card:hover .links {
+bottom: 0;
+}
+
+.links a {
+    background-color: rgba(103, 176, 209, 0.75);
+    border: 2px solid transparent;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    width: 50%;
+    padding: .5rem 0;
+    transition: all .2s linear;
+}
+
+.links svg {
+    padding-top: .2rem;
+}
+
+.links a:hover {
+    background-color: rgba(103, 176, 209, .9);
+    border: 2px solid rgb(33, 110, 146)
+}
+
+@media screen and (max-width: 992px) {
+  .galery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .galery {
+        grid-template-columns: 1fr;
+    }
+}

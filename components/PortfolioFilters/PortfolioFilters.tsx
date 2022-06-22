@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { BiLink, BiPlus } from "react-icons/bi";
+import { AnimatePresence, motion } from "framer-motion";
+import { useFilter } from "../../hooks/useFilter";
 import filterStyles from "../../styles/PortfolioFilters.module.css";
 import galeryStyles from "../../styles/PortfolioGalery.module.css";
-import Link from "next/link";
 
 type Props = {
     data: {
@@ -25,7 +27,8 @@ type Props = {
 
 const PortfolioFilters: React.FC<Props> = ({ data }) => {
     const [filter, setFilter] = useState<string>("all");
-    console.log(data);
+    const cards = useFilter(data, filter);
+
     const toggleAll = () => {
         setFilter("all");
     };
@@ -53,6 +56,12 @@ const PortfolioFilters: React.FC<Props> = ({ data }) => {
                         All
                     </li>
                     <li
+                        className={`${filterStyles.filtersItem} ${filter === "web" ? filterStyles.active : ""}`}
+                        onClick={toggleWeb}
+                    >
+                        Web
+                    </li>
+                    <li
                         className={`${filterStyles.filtersItem} ${filter === "app" ? filterStyles.active : ""}`}
                         onClick={toggleApp}
                     >
@@ -64,37 +73,42 @@ const PortfolioFilters: React.FC<Props> = ({ data }) => {
                     >
                         Card
                     </li>
-                    <li
-                        className={`${filterStyles.filtersItem} ${filter === "web" ? filterStyles.active : ""}`}
-                        onClick={toggleWeb}
-                    >
-                        Web
-                    </li>
                 </ul>
             </article>
             <article className={galeryStyles.galery}>
-                {data.map((card) => (
-                    <div key={card.id} className={galeryStyles.card}>
-                        <Image
-                            src={`http://localhost:1337${card.attributes.image.data[0].attributes.url}`}
-                            width={416}
-                            height={416}
-                            alt={`image of ${card.attributes.title}`}
-                        />
-                        <div className={galeryStyles.links}>
-                            <Link href={"/"}>
-                                <a>
-                                    <BiPlus />
-                                </a>
-                            </Link>
-                            <Link href={"/"}>
-                                <a>
-                                    <BiLink />
-                                </a>
-                            </Link>
-                        </div>
-                    </div>
-                ))}
+                <AnimatePresence exitBeforeEnter>
+                    {cards.map((card) => (
+                        <motion.div
+                            key={card.id}
+                            className={galeryStyles.card}
+                            animate={{ opacity: 1, scale: 1 }}
+                            initial={{ opacity: 0, scale: 0 }}
+                            exit={{ opacity: 0, scale: 0.4 }}
+                            transition={{ duration: 0.7 }}
+                            layout
+                        >
+                            <Image
+                                src={`http://localhost:1337${card.attributes.image.data[0].attributes.url}`}
+                                width={416}
+                                height={416}
+                                alt={`image of ${card.attributes.title}`}
+                            />
+
+                            <div className={galeryStyles.links}>
+                                <Link href={"/"}>
+                                    <a>
+                                        <BiPlus />
+                                    </a>
+                                </Link>
+                                <Link href={"/"}>
+                                    <a>
+                                        <BiLink />
+                                    </a>
+                                </Link>
+                            </div>
+                        </motion.div>
+                    ))}
+                </AnimatePresence>
             </article>
         </section>
     );

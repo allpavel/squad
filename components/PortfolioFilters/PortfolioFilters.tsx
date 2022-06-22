@@ -5,7 +5,7 @@ import { BiLink, BiPlus } from "react-icons/bi";
 import { AnimatePresence, motion } from "framer-motion";
 import { useFilter } from "../../hooks/useFilter";
 import filterStyles from "../../styles/PortfolioFilters.module.css";
-import galeryStyles from "../../styles/PortfolioGalery.module.css";
+import galeryStyles from "../../styles/PortfolioGallery.module.css";
 
 type Props = {
     data: {

@@ -13,6 +13,13 @@ type Props = {
                 category: string;
                 slug: string;
                 title: string;
+                image: {
+                    data: {
+                        attributes: {
+                            url: string;
+                        };
+                    }[];
+                };
             };
         }[];
         meta: {};

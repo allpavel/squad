@@ -95,12 +95,12 @@ const PortfolioFilters: React.FC<Props> = ({ data }) => {
                             />
 
                             <div className={galeryStyles.links}>
-                                <Link href={"/"}>
+                                <Link href={`/`}>
                                     <a>
                                         <BiPlus />
                                     </a>
                                 </Link>
-                                <Link href={"/"}>
+                                <Link href={`/portfolio/${card.attributes.slug}`}>
                                     <a>
                                         <BiLink />
                                     </a>

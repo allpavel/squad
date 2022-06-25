@@ -28,7 +28,6 @@ type Card = {
 };
 
 export default function PortfolioPage({ card }: InferGetStaticPropsType<typeof getStaticProps>) {
-    console.log(card);
     const path = useGetPath();
     return (
         <main className={styles.main}>

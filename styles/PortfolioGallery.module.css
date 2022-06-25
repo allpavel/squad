@@ -42,10 +42,11 @@
 }
 
 .card:hover .links {
-bottom: 0;
+    bottom: 0;
 }
 
-.links a {
+.links a,
+.button {
     background-color: rgba(103, 176, 209, 0.75);
     border: 2px solid transparent;
     color: #fff;
@@ -56,11 +57,13 @@ bottom: 0;
     transition: all .2s linear;
 }
 
-.links svg {
+.links svg,
+.button svg {
     padding-top: .2rem;
 }
 
-.links a:hover {
+.links a:hover,
+.button:hover {
     background-color: rgba(103, 176, 209, .9);
     border: 2px solid rgb(33, 110, 146)
 }

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { BiLink, BiPlus } from "react-icons/bi";
 import { AnimatePresence, motion } from "framer-motion";
 import { useFilter } from "../../hooks/useFilter";
+import PortfolioImageGallery from "../PortfolioImageGallery/PortfolioImageGallery";
+import Modal from "../Modal/Modal";
 import filterStyles from "../../styles/PortfolioFilters.module.css";
 import galeryStyles from "../../styles/PortfolioGallery.module.css";
 
@@ -27,7 +29,16 @@ type Props = {
 
 const PortfolioFilters: React.FC<Props> = ({ data }) => {
     const [filter, setFilter] = useState<string>("all");
+    const [cardIndex, setCardIndex] = useState<number>(0);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
+
     const cards = useFilter(data, filter);
+
+    const handleOpenGallery = (index: number) => {
+        setIsVisible(true);
+        setCardIndex(index);
+        document.body.style.overflow = "hidden";
+    };
 
     const toggleAll = () => {
         setFilter("all");
@@ -47,6 +58,11 @@ const PortfolioFilters: React.FC<Props> = ({ data }) => {
 
     return (
         <section className={filterStyles.portfolioFilters}>
+            {isVisible && (
+                <Modal isVisible={isVisible} setIsVisible={setIsVisible}>
+                    <PortfolioImageGallery cards={cards} cardIndex={cardIndex} />
+                </Modal>
+            )}
             <article className={filterStyles.container}>
                 <ul className={filterStyles.filtersRow}>
                     <li
@@ -77,7 +93,7 @@ const PortfolioFilters: React.FC<Props> = ({ data }) => {
             </article>
             <article className={galeryStyles.galery}>
                 <AnimatePresence exitBeforeEnter>
-                    {cards.map((card) => (
+                    {cards.map((card, index) => (
                         <motion.div
                             key={card.id}
                             className={galeryStyles.card}
@@ -95,11 +111,9 @@ const PortfolioFilters: React.FC<Props> = ({ data }) => {
                             />
 
                             <div className={galeryStyles.links}>
-                                <Link href={`/`}>
-                                    <a>
-                                        <BiPlus />
-                                    </a>
-                                </Link>
+                                <button onClick={() => handleOpenGallery(index)} className={galeryStyles.button}>
+                                    <BiPlus />
+                                </button>
                                 <Link href={`/portfolio/${card.attributes.slug}`}>
                                     <a>
                                         <BiLink />

@@ -27,7 +27,6 @@ type Props = {
 };
 
 export default function PortfolioPage({ cards: { data } }: Props) {
-    console.log("portfolio data: ", data);
     const path = useGetPath();
     return (
         <main className={styles.main}>

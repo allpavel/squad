@@ -90,8 +90,8 @@ const Footer: React.FC = () => {
                         <h2>Our Newsletter</h2>
                         <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
                         <form>
-                            <input type="email" />
-                            <input type="submit" value="Subscribe" />
+                            <input type="email" aria-label="Email for subscribe" />
+                            <input type="submit" value="Subscribe" aria-label="Submit subscription" />
                         </form>
                     </div>
                 </section>

@@ -36,43 +36,65 @@ const NavBar: React.FC = () => {
                     </Link>
                 </li>
                 <li className={`${styles.navigationListItem} ${styles.dropdown}`}>
-                    <a>
-                        Dropdown <BiChevronDown />
-                    </a>
+                    <Link href="/">
+                        <a>
+                            Dropdown <BiChevronDown />
+                        </a>
+                    </Link>
                     <ul className={styles.dropdownList}>
                         <li className={styles.navigationListItem}>
-                            <a>Dropdown 1</a>
+                            <Link href="/">
+                                <a>Dropdown 1</a>
+                            </Link>
                         </li>
                         <li className={styles.navigationListItem}>
-                            <a>Dropdown 2</a>
+                            <Link href="/">
+                                <a>Dropdown 2</a>
+                            </Link>
                         </li>
                         <li className={`${styles.navigationListItem} ${styles.deepDropdown}`}>
-                            <a>
-                                Dropdown 3 <BiChevronDown />
-                            </a>
+                            <Link href="/">
+                                <a>
+                                    Dropdown 3 <BiChevronDown />
+                                </a>
+                            </Link>
                             <ul className={styles.deepDropdownList}>
                                 <li className={styles.navigationListItem}>
-                                    <a>Deep Dropdown 1</a>
+                                    <Link href="/">
+                                        <a>Deep Dropdown 1</a>
+                                    </Link>
                                 </li>
                                 <li className={styles.navigationListItem}>
-                                    <a>Deep Dropdown 2</a>
+                                    <Link href="/">
+                                        <a>Deep Dropdown 2</a>
+                                    </Link>
                                 </li>
                                 <li className={styles.navigationListItem}>
-                                    <a>Deep Dropdown 3</a>
+                                    <Link href="/">
+                                        <a>Deep Dropdown 3</a>
+                                    </Link>
                                 </li>
                                 <li className={styles.navigationListItem}>
-                                    <a>Deep Dropdown 4</a>
+                                    <Link href="/">
+                                        <a>Deep Dropdown 4</a>
+                                    </Link>
                                 </li>
                                 <li className={styles.navigationListItem}>
-                                    <a>Deep Dropdown 5</a>
+                                    <Link href="/">
+                                        <a>Deep Dropdown 5</a>
+                                    </Link>
                                 </li>
                             </ul>
                         </li>
                         <li className={styles.navigationListItem}>
-                            <a>Dropdown 4</a>
+                            <Link href="/">
+                                <a>Dropdown 4</a>
+                            </Link>
                         </li>
                         <li className={styles.navigationListItem}>
-                            <a>Dropdown 5</a>
+                            <Link href="/">
+                                <a>Dropdown 5</a>
+                            </Link>
                         </li>
                     </ul>
                 </li>

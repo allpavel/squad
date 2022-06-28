@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
@@ -30,10 +31,21 @@ type Card = {
 export default function PortfolioPage({ card }: InferGetStaticPropsType<typeof getStaticProps>) {
     const path = useGetPath();
     return (
-        <main className={styles.main}>
-            <Breadcrumbs path={path} />
-            <PortfolioCard card={card} />
-        </main>
+        <>
+            <Head>
+                <title>{path[1]} Page</title>
+                <meta
+                    name="description"
+                    content="Face years night saying to isn't creature. Their void you'll whose midst have have it subdue female you. Set evening."
+                />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta charSet="UTF-8" />
+            </Head>
+            <main className={styles.main}>
+                <Breadcrumbs path={path} />
+                <PortfolioCard card={card} />
+            </main>
+        </>
     );
 }
 

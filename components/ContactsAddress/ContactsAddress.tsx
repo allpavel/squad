@@ -37,6 +37,7 @@ const ContactsAddress: React.FC = () => {
             <div className={styles.mapContainer}>
                 <div className={styles.map}>
                     <iframe
+                        title="Our location"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511.1129038876493!2d-73.98714659254851!3d40.75705799619823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x86d0bd549e20f12c!2zNDDCsDQ1JzI1LjQiTiA3M8KwNTknMTAuNCJX!5e0!3m2!1sru!2sru!4v1655149152050!5m2!1sru!2sru"
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"

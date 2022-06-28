@@ -111,11 +111,16 @@ const PortfolioFilters: React.FC<Props> = ({ data }) => {
                             />
 
                             <div className={galeryStyles.links}>
-                                <button onClick={() => handleOpenGallery(index)} className={galeryStyles.button}>
+                                <button
+                                    onClick={() => handleOpenGallery(index)}
+                                    className={galeryStyles.button}
+                                    aria-label="Open an image gallery"
+                                    title="Open an image gallery"
+                                >
                                     <BiPlus />
                                 </button>
                                 <Link href={`/portfolio/${card.attributes.slug}`}>
-                                    <a>
+                                    <a title="Go to the description ">
                                         <BiLink />
                                     </a>
                                 </Link>

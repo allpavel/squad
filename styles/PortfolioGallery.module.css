@@ -64,6 +64,7 @@
 
 .links a:hover,
 .button:hover {
+    cursor: pointer;
     background-color: rgba(103, 176, 209, .9);
     border: 2px solid rgb(33, 110, 146)
 }

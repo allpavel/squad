@@ -19,7 +19,7 @@ export default function ErrorPage() {
             </Head>
             <main className={styles.main}>
                 <Breadcrumbs path={path} />
-                <ErrorMessage code={404} />
+                <ErrorMessage code={500} />
             </main>
         </>
     );

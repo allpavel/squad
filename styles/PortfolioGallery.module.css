@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
-    gap: 1.5rem;
+    grid-gap: 1.5rem;
     margin-bottom: 4rem;
 }
 
@@ -10,7 +10,6 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-    /* transition: all .4s linear; */
 }
 
 .card::before {

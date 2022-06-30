@@ -27,7 +27,7 @@ const PortfolioCard: React.FC<Card> = ({ card }) => {
     return (
         <section className={styles.portfolioCard}>
             <Image
-                src={`http://localhost:1337${card.attributes.image.data[0].attributes.url}`}
+                src={card.attributes.image.data[0].attributes.url}
                 alt={`image of ${card.attributes.title}`}
                 width={856}
                 height={642}

@@ -51,6 +51,7 @@ export default function PortfolioPage({ cards: { data } }: Props) {
 
 export async function getStaticProps() {
     const cards = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/portfolios?populate=*`);
+    // const cards = await fetcher(`https://tranquil-gorge-86376.herokuapp.com/api/portfolios?populate=*`);
     return {
         props: { cards },
     };

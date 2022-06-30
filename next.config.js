@@ -3,7 +3,7 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ["localhost"],
+        domains: ["tranquil-gorge-86376.herokuapp.com", "res.cloudinary.com"],
     },
     i18n: {
         locales: ["en"],

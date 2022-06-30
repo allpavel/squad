@@ -3,7 +3,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 const PortfolioImageGallery = ({ cards, cardIndex }) => {
     const images = cards.map((card) => ({
-        original: `http://localhost:1337${card.attributes.image.data[0].attributes.url}`,
+        original: card.attributes.image.data[0].attributes.url,
     }));
     return <ImageGallery items={images} showBullets showPlayButton={false} startIndex={cardIndex} />;
 };

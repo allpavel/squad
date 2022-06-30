@@ -104,7 +104,7 @@ const PortfolioFilters: React.FC<Props> = ({ data }) => {
                             layout
                         >
                             <Image
-                                src={`http://localhost:1337${card.attributes.image.data[0].attributes.url}`}
+                                src={card.attributes.image.data[0].attributes.url}
                                 width={416}
                                 height={416}
                                 alt={`image of ${card.attributes.title}`}

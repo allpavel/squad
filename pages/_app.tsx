@@ -1,3 +1,4 @@
+import Head from "next/head";
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
@@ -16,9 +17,14 @@ type AppPropsWithLayout = AppProps & {
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     const getLayout = Component.getLayout ?? ((page) => page);
     return getLayout(
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <>
+            <Head>
+                <link rel="shortcut icon" href="/favicon.png" />
+            </Head>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </>
     );
 }
 

@@ -62,7 +62,7 @@ const TeamPage: React.FC<Props> = ({ teams: { data } }) => {
                         {data.map((card) => (
                             <div className={styleClasses.card} key={card.id}>
                                 <Image
-                                    src={`http://localhost:1337${card.attributes.image.data.attributes.url}`}
+                                    src={card.attributes.image.data.attributes.url}
                                     alt={`image of ${card.attributes.name}`}
                                     width={416}
                                     height={416}

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
 import ErrorMessage from "../components/ErrorMessage/ErrorMessage";
 import { useGetPath } from "../hooks/useGetPath";
 import styles from "../styles/Main.module.css";
@@ -18,7 +17,6 @@ export default function ErrorPage() {
                 <meta charSet="UTF-8" />
             </Head>
             <main className={styles.main}>
-                <Breadcrumbs path={path} />
                 <ErrorMessage code={500} />
             </main>
         </>

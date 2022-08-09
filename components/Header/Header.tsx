@@ -5,6 +5,7 @@ import NavBar from "../Navbar/Navbar";
 import Logo from "../Logo/Logo";
 import styles from "../../styles/Header.module.css";
 import MobileNavbar from "../MobileNavbar/MobileNavbar";
+import { throttle } from "../../utilities/throttle";
 
 const Header: React.FC = () => {
     const [header, setHeader] = useState(false);
@@ -25,9 +26,11 @@ const Header: React.FC = () => {
             }
         };
 
-        window.addEventListener("scroll", changeHeaderBackgroundColor);
+        const throttledChangeHeaderBackgroundColor = throttle(changeHeaderBackgroundColor, 200);
 
-        return () => window.removeEventListener("scroll", changeHeaderBackgroundColor);
+        window.addEventListener("scroll", throttledChangeHeaderBackgroundColor);
+
+        return () => window.removeEventListener("scroll", throttledChangeHeaderBackgroundColor);
     }, [header]);
 
     return (

@@ -10,12 +10,15 @@ import { throttle } from "../../utilities/throttle";
 const Header: React.FC = () => {
     const [header, setHeader] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
 
     const handleMobileMenuClick = () => {
         setIsOpen((prev) => !prev);
     };
 
-    const router = useRouter();
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? "hidden" : "";
+    }, [isOpen]);
 
     useEffect(() => {
         const changeHeaderBackgroundColor = () => {

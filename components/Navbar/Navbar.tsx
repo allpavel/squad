@@ -17,22 +17,22 @@ const NavBar: React.FC = () => {
                 </li>
                 <li className={styles.navigationListItem}>
                     <Link href="/about">
-                        <a className={`${router.pathname === "/about/" ? styles.active : ""}`}>Abous Us</a>
+                        <a className={`${router.pathname === "/about" ? styles.active : ""}`}>Abous Us</a>
                     </Link>
                 </li>
                 <li className={styles.navigationListItem}>
                     <Link href="/services">
-                        <a className={`${router.pathname === "/services/" ? styles.active : ""}`}>Services</a>
+                        <a className={`${router.pathname === "/services" ? styles.active : ""}`}>Services</a>
                     </Link>
                 </li>
                 <li className={styles.navigationListItem}>
                     <Link href="/portfolio">
-                        <a className={`${router.pathname === "/portfolio/" ? styles.active : ""}`}>Portfolio</a>
+                        <a className={`${router.pathname === "/portfolio" ? styles.active : ""}`}>Portfolio</a>
                     </Link>
                 </li>
                 <li className={styles.navigationListItem}>
                     <Link href="/team">
-                        <a className={`${router.pathname === "/team/" ? styles.active : ""}`}>Team</a>
+                        <a className={`${router.pathname === "/team" ? styles.active : ""}`}>Team</a>
                     </Link>
                 </li>
                 <li className={`${styles.navigationListItem} ${styles.dropdown}`}>

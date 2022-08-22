@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "../../styles/Footer.module.css";
+import Link from "next/link";
 import { FaTwitter, FaFacebook, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { BiChevronRight } from "react-icons/bi";
+import styles from "../../styles/Footer.module.css";
 
 const Footer: React.FC = () => {
     return (
@@ -32,28 +33,52 @@ const Footer: React.FC = () => {
                         <h2>Useful Links</h2>
                         <ul>
                             <li>
-                                <BiChevronRight />
-                                Home
+                                <Link href="/">
+                                    <a>
+                                        <BiChevronRight />
+                                        Home
+                                    </a>
+                                </Link>
                             </li>
                             <li>
-                                <BiChevronRight />
-                                About Us
+                                <Link href="/about">
+                                    <a>
+                                        <BiChevronRight />
+                                        About Us
+                                    </a>
+                                </Link>
                             </li>
                             <li>
-                                <BiChevronRight />
-                                Services
+                                <Link href="/services">
+                                    <a>
+                                        <BiChevronRight />
+                                        Services
+                                    </a>
+                                </Link>
                             </li>
                             <li>
-                                <BiChevronRight />
-                                Portfolio
+                                <Link href="/portfolio">
+                                    <a>
+                                        <BiChevronRight />
+                                        Portfolio
+                                    </a>
+                                </Link>
                             </li>
                             <li>
-                                <BiChevronRight />
-                                Team
+                                <Link href="/team">
+                                    <a>
+                                        <BiChevronRight />
+                                        Team
+                                    </a>
+                                </Link>
                             </li>
                             <li>
-                                <BiChevronRight />
-                                Contacts
+                                <Link href="/contacts">
+                                    <a>
+                                        <BiChevronRight />
+                                        Contacts
+                                    </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

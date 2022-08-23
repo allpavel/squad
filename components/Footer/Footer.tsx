@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                         <ul>
                             <li>
                                 <Link href="/">
-                                    <a>
+                                    <a className={styles.link}>
                                         <BiChevronRight />
                                         Home
                                     </a>
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                             </li>
                             <li>
                                 <Link href="/about">
-                                    <a>
+                                    <a className={styles.link}>
                                         <BiChevronRight />
                                         About Us
                                     </a>
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                             </li>
                             <li>
                                 <Link href="/services">
-                                    <a>
+                                    <a className={styles.link}>
                                         <BiChevronRight />
                                         Services
                                     </a>
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                             </li>
                             <li>
                                 <Link href="/portfolio">
-                                    <a>
+                                    <a className={styles.link}>
                                         <BiChevronRight />
                                         Portfolio
                                     </a>
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                             </li>
                             <li>
                                 <Link href="/team">
-                                    <a>
+                                    <a className={styles.link}>
                                         <BiChevronRight />
                                         Team
                                     </a>
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                             </li>
                             <li>
                                 <Link href="/contacts">
-                                    <a>
+                                    <a className={styles.link}>
                                         <BiChevronRight />
                                         Contacts
                                     </a>

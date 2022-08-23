@@ -1,6 +1,5 @@
 .mobileNavigation {
     position: fixed;
-    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
@@ -29,15 +28,18 @@
 .navigationListItem {
     list-style: none;
     text-align: center;
-    margin: 1.5rem 0;
+    padding: 1rem 0;
 }
 
 .navigationListItem a {
-    width: 100%;
+    display: block;
+    max-width: 70%;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
     color: #000;
+    margin: 0 auto;
+    padding: 0.5rem 0;
     transition: all 0.5s ease;
 }
 
@@ -46,8 +48,8 @@
 }
 
 .isOpen {
-    opacity: '1';
-    height: '100%';
+    opacity: 1;
+    height: 100%;
 }
 
 .isClosed {
@@ -56,6 +58,9 @@
     transition: all .6s linear;
 }
 
+.active {
+    background-color: rgba(103, 176, 209, 0.733);
+}
 
 @media screen and (min-width: 992px) {
     .mobileNavigation {

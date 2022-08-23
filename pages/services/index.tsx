@@ -25,7 +25,7 @@ export default function ServicesPage() {
                 <Services />
                 <Counter />
                 <CallToAction />
-                <Accordion />
+                {/* <Accordion /> */}
             </main>
         </>
     );

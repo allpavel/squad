@@ -5,7 +5,6 @@ import Counter from "../../components/Counter/Counter";
 import CallToAction from "../../components/CallToAction/CallToAction";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import styles from "../../styles/Main.module.css";
-import Accordion from "../../components/Accordion/Accordion";
 
 export default function ServicesPage() {
     const path = useGetPath();
@@ -25,7 +24,6 @@ export default function ServicesPage() {
                 <Services />
                 <Counter />
                 <CallToAction />
-                {/* <Accordion /> */}
             </main>
         </>
     );

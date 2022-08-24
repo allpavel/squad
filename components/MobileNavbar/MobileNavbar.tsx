@@ -10,10 +10,9 @@ interface Props {
 
 const MobileNavbar: React.FC<Props> = ({ isOpen, setIsOpen }) => {
     const router = useRouter();
-    console.log(router.pathname);
     return (
         <nav className={`${styles.mobileNavigation} ${isOpen ? styles.isOpen : styles.isClosed}`}>
-            <ul className={styles.mobileNavigationList} onClick={(isOpen) => setIsOpen(!isOpen)}>
+            <ul className={styles.mobileNavigationList} onClick={() => setIsOpen(false)}>
                 <li className={styles.navigationListItem}>
                     <Link href="/">
                         <a className={`${router.pathname === "/" ? styles.active : ""}`}>Home</a>

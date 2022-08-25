@@ -59,6 +59,7 @@
     background-color: #67b0d191;
 }
 
+
 .footerLinks svg {
     color: #67b0d1;
 }
@@ -176,5 +177,12 @@
     .footerNewsletter {
         margin-top: 2rem;
         padding: 0;
+    }
+}
+
+
+@media (hover: none) {
+    .footerLinks li:hover {
+        background-color: transparent;
     }
 }

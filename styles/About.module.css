@@ -29,7 +29,7 @@
     padding: 4rem 4rem 4rem 0;
 }
 
-.bigCell h2 {
+.bigCell h3 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 2rem;
@@ -70,7 +70,7 @@
     padding: 0 1rem;
 }
 
-.smallCell div h2 {
+.smallCell div h3 {
     margin-top: 0;
 }
 
@@ -97,7 +97,7 @@
         grid-template-columns: 1fr;
     }
 
-    .smallCell h2 {
+    .smallCell h3 {
         margin-bottom: 0.5rem;
     }
 

@@ -12,14 +12,14 @@ const Breadcrumbs: React.FC<Props> = ({ path }) => {
             <section className={styles.breadcrumbs}>
                 <div className={styles.container}>
                     <h2 className={styles.title}>{path[0]}</h2>
-                    <ul className={styles.links}>
+                    <ol className={styles.links}>
                         <li>
                             <Link href="/">
                                 <a>Home</a>
                             </Link>
                         </li>
                         <li>{path[0]}</li>
-                    </ul>
+                    </ol>
                 </div>
             </section>
         );
@@ -28,7 +28,7 @@ const Breadcrumbs: React.FC<Props> = ({ path }) => {
         <section className={styles.breadcrumbs}>
             <div className={styles.container}>
                 <h2 className={styles.title}>{path[0]}</h2>
-                <ul className={styles.links}>
+                <ol className={styles.links}>
                     <li>
                         <Link href="/">
                             <a>Home</a>
@@ -42,7 +42,7 @@ const Breadcrumbs: React.FC<Props> = ({ path }) => {
                         </li>
                     ))}
                     <li>{path[path.length - 1]}</li>
-                </ul>
+                </ol>
             </div>
         </section>
     );

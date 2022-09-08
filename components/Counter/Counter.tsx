@@ -21,6 +21,7 @@ const Counter: React.FC = () => {
 
     return (
         <section className={styles.counter}>
+            <h2 className="visually-hidden">Counter</h2>
             <div className={styles.container}>
                 <div className={styles.counterItem}>
                     <div className={styles.counterIcon}>

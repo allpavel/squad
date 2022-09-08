@@ -5,6 +5,7 @@ import styles from "../../styles/CallToAction.module.css";
 const CallToAction: React.FC = () => {
     return (
         <section className={styles.cta}>
+            <h2 className="visually-hidden">Call To Action</h2>
             <motion.div
                 className={styles.container}
                 initial={{

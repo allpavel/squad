@@ -4,11 +4,9 @@ import styles from "../../styles/Logo.module.css";
 
 const Logo: React.FC = () => {
     return (
-        <h1 className={styles.logo}>
             <Link href="/">
-                <a>Squadfree</a>
+                <a className={styles.logo}>Squadfree</a>
             </Link>
-        </h1>
     );
 };
 
